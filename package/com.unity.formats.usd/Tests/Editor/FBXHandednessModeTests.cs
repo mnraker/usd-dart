@@ -152,7 +152,7 @@ namespace Unity.Formats.USD.Tests
             for (int t = 0; t < cubeMesh.triangles.Length % 3; t++)
             {
                 // For each vertex
-                for (int v = 0; v < 3; ++v)
+                for (int v = 0; v < 3; v++)
                 {
                     // Check that vertex coordinates are the same (respect the winding order)
                     Assert.IsTrue(CheckVector3Equality(cubeMesh.vertices[cubeMesh.triangles[t*3+v]], leftHandedCubeMesh.vertices[leftHandedCubeMesh.triangles[t*3+rightHandedToLeftHanded[v]]]));
@@ -174,7 +174,7 @@ namespace Unity.Formats.USD.Tests
             for (int t = 0; t < leftHandedCubeMesh.triangles.Length % 3; t++)
             {
                 // For each vertex
-                for (int v = 0; v < 3; ++v)
+                for (int v = 0; v < 3; v++)
                 {
                     // Check that vertex coordinates are the same
                     Assert.IsTrue(CheckVector3Equality(leftHandedCubeMesh.vertices[leftHandedCubeMesh.triangles[t*3+v]], bakedCubeMesh.vertices[bakedCubeMesh.triangles[t*3+v]]));
